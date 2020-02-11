@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The DOM</title>
+</head>
+<body>
+<img alt="cat" src="../../img/cat.png" id="cat" style="position: absolute">
+<img alt="hat" src="../../img/hat.png" id="hat" style="position: absolute">
+<script>
+    var cat = document.querySelector("#cat");
+    var hat = document.querySelector("#hat");
+    var catAngle = Math.PI, hatAngle = Math.PI, radius = 150;
+    var catOffset = Math.PI / 120, hatOffset = Math.PI / 48;
+    var catX, catY, hatX, hatY;
+
+    function animate() {
+        catAngle += catOffset;
+        hatAngle += hatOffset;
+        catX = (document.documentElement.clientWidth - cat.offsetWidth) / 2;
+        catY = (document.documentElement.clientHeight - cat.offsetHeight) / 2;
+        hatX = cat.offsetLeft + (cat.offsetWidth - hat.offsetWidth) / 2;
+        hatY = cat.offsetTop + (cat.offsetHeight - hat.offsetHeight) / 2;
+        cat.style.left = Math.cos(catAngle) * radius + catX + 'px';
+        cat.style.top = Math.sin(catAngle) * radius + catY + 'px';
+        hat.style.left = Math.cos(hatAngle) * radius + hatX + 'px';
+        hat.style.top = Math.sin(hatAngle) * radius + hatY + 'px';
+        requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+</script>
+</body>
+</html>
