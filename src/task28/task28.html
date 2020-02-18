@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+<canvas width="600" height="200"></canvas>
+<script type='text/javascript' src='task28.js'></script>
+<script>
+    var cx = document.querySelector("canvas").getContext("2d");
+    trapezoid(cx, null, 30, 50, 10, 150, 60);
+    diamond(cx, 'red', 130, 100, 230);
+    zigzag(cx, 250, 50, 350, 150, 6);
+    spiral(cx, 420, 100, 20, 3.15, 100);
+    star(cx, 540, 100, 50, 8);
+</script>
+</body>
+</html>
