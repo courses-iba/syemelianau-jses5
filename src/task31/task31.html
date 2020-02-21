@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP</title>
+</head>
+<body>
+<script type="text/javascript" src="task31.js"></script>
+<script>
+    var url = 'https://eloquentjavascript.net/author';
+    var type = [
+        'text/plain',
+        'text/html',
+        'application/json',
+        'application/rainbows+unicorns'
+    ];
+    for (var i = 0; i < type.length; ++i) {
+        request(url, 'Accept', type[i]);
+    }
+</script>
+</body>
+</html>
