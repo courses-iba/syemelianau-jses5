@@ -1,0 +1,30 @@
+.root {
+    padding: 0;
+    margin: 0;
+}
+
+.root {
+    display: flex;
+    height: 100vh;
+}
+
+.right,
+.left {
+    padding: 1vh;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right,
+.right textarea,
+.bottom {
+    flex-grow: 1;
+}

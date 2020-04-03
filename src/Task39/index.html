@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NodeJS</title>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+          href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+          integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<form class="root">
+    <div class="left">
+        <label>
+            <input id="file" type="text" class="form-control">
+        </label>
+        <button id="createFile" type="button" class="btn btn-raised" disabled>Create file</button>
+        <button id="createDirectory" type="button" class="btn btn-raised" disabled>Create directory</button>
+        <div>
+            <button id="save" type="button" class="btn btn-raised btn-success" disabled>Save</button>
+            <button id="delete" type="button" class="btn btn-raised btn-danger" disabled>Delete</button>
+            <button id="back" type="button" class="btn btn-raised" disabled>Back</button>
+        </div>
+        <select class="bottom" size="2"></select>
+    </div>
+    <div class="right">
+        <label>
+            <input id="directory" type="text" class="form-control" disabled>
+        </label>
+        <textarea></textarea>
+    </div>
+</form>
+<script type="text/javascript" src="main.js"></script>
+<script>
+    execute();
+</script>
+</body>
+</html>
